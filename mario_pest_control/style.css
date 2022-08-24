@@ -1,0 +1,32 @@
+#banner {
+    background-color: lightgreen ;
+    text-align: center;
+    padding: 25px;
+    width: 80vw;
+    margin: auto;
+}
+
+#formContainer {
+    background-color: lightblue;
+    padding: 25px;
+    width: 80vw;
+    margin: auto;
+}
+
+#footer {
+    background-color: lightgreen ;
+    text-align: center;
+    padding: 25px;
+    width: 80vw;
+    margin: auto;
+}
+.bobomb {
+    position: relative;
+    width: 225px;
+    height: auto;
+}
+.cheep {
+    position: relative;
+    width: 225px;
+    height: auto;
+}

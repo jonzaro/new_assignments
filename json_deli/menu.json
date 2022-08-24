@@ -1,0 +1,54 @@
+{
+    "appetizers": [
+        {
+            "name": "Chicken Noodle Soup",
+            "ingredients": ["Broth", "Chicken", "Vegetables"]
+        },
+        {
+            "name": "Scrambled Eggs",
+            "ingredients": "3 Eggs"
+        }],
+
+    "cold sandwhiches": [
+        {
+            "name": "BLT",
+            "ingredients": ["Bacon", "Lettuce", "Tomato"]
+        },
+        {
+            "name": "Ham and Cheese",
+            "ingredients": ["White Bread", "Ham", "American Cheese" ]
+        }],
+
+    "hot sandwhiches": [
+        {
+            "name": "Grilled Cheese",
+            "ingredients": ["White Bread", "American Cheese", "Pepperjack Cheese"]
+        },
+        {
+            "name": "Panini",
+            "ingredients": ["Tuscan Bread", "Chicken Breast", "Avacado", "Tomato"]
+        }
+        ],
+
+    "deserts": [
+        {
+            "name": "Oreo Cheesecake",
+            "ingredients": ["House Cheesecake", "Oreo Crumbles"]
+        },
+        {
+            "name": "Custard Fruit Cup",
+            "ingredients": ["Vanilla Custard", "Mixed Fruit", "Whipped Topping"]
+        }
+    ],
+    
+    "drinks": [
+        {
+            "name": "Coffee",
+            "ingredients": ["Black Coffee", "Whole Cream", "Whipped Topping"]
+        },
+        {
+            "name": "Root Beer Float",
+            "ingredients": ["House Made Root Beer", "Vanilla Ice Cream"]
+        }
+    ]
+}

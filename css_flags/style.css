@@ -1,0 +1,347 @@
+#france {
+    margin-top: 20px;
+    margin-left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+    display: inline-block;
+}
+.franBlue {
+    height: 300px;
+    width: 150px;
+    background-color: blue;
+    display: inline-block;
+}
+.franWhite {
+    height: 300px;
+    width: 150px;
+    background-color: white;
+    display: inline-block;
+}
+.franRed {
+    height: 300px;
+    width: 150px;
+    background-color: red;
+    display: inline-block;
+}
+#germany {
+    position: relative;
+    top: 5px;
+    left: 200px;
+    border: black solid 2px;
+    width: 450px;
+    height: 301px;
+    display: inline-block;
+}
+.germBlack {
+    height: 100px;
+    width: 450px;
+    background-color: black;
+}
+.germRed {
+    height: 100px;
+    width: 450px;
+    background: red;
+}
+.germYellow {
+    height: 100px;
+    width: 450px;
+    background-color: yellow;
+}
+#madagascar {
+    margin-top: 50px;
+    margin-left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+    display: inline-block;
+}
+.madWhite {
+    height: 300px;
+    width: 160px;
+    background-color: white;
+    display: inline-block;
+}
+.madOrange {
+    height: 150px;
+    width: 298px;
+    background-color: #EB493B;
+    display: inline-block;
+    position: relative;
+    top: -304px;
+    left: 160px;
+}
+.madGreen {
+    height: 150px;
+    width: 298px;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    top: -308px;
+    left: 160px;
+}
+#switzerland {
+    position: relative;
+    top: -305px;
+    left: 275px;
+    border: black solid 2px;
+    width: 300px;
+    height: 301px;
+    display: inline-block;
+}
+.switzRed {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+}
+.switzVert {
+    height: 200px;
+    width: 50px;
+    background-color: white;
+    position: relative;
+    top: -250px;
+    left: 125px;
+}
+.switzHoriz {
+    height: 50px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 125px;
+    left: 50px;
+}
+#sweden {
+    position: relative;
+    top: -250px;
+    margin-left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+}
+.swedBlue {
+    height: 300px;
+    width: 458px;
+    background-color: #4183E8;
+}
+.swedYellowVert {
+    height: 300px;
+    width: 50px;
+    background-color: yellow;
+    position: relative;
+    top: -300px;
+    left: 130px;
+}
+.swedYellowHoriz {
+    height: 50px;
+    width: 458px;
+    background-color: yellow;
+    position: relative;
+    top: -475px;
+}
+#gambia {
+    position: relative;
+    top: -555px;
+    left: 750px;
+    border: black solid 2px;
+    width: 450px;
+    height: 301px;
+}
+.gamRed {
+    height: 100px;
+    width: 450px;
+    background-color: #FF2020;
+}
+.gamBlue {
+    height: 70px;
+    width: 450px;
+    background-color: blue;
+    margin-top: 15px;
+}
+.gamGreen {
+    height: 100px;
+    width: 450px;
+    background-color: green;
+    margin-top: 15px;
+}
+#tonga {
+    position: relative;
+    top: -490px;
+    left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+}
+.tongRedBg {
+    height: 300px;
+    width: 458px;
+    margin-top: 1px;
+    background-color: #C20A00;
+}
+.tongWhiteBg {
+    height: 150px;
+    width: 210px;
+    background-color: white;
+    position: relative;
+    top: -300px;
+}
+.tongRedVert {
+    height: 115px;
+    width: 35px;
+    background-color: #C20A00;
+    position: relative;
+    top: -432px;
+    left: 80px;
+}
+.tongRedHoriz {
+    height: 35px;
+    width: 115px;
+    background-color: #C20A00;
+    position: relative;
+    top: -505px;
+    left: 40px;
+}
+#japan {
+    position: relative;
+    top: -790px;
+    left: 750px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+}
+.japRed {
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    position: relative;
+    top: 75px;
+    left: 150px;
+    border-radius: 100%;
+}
+#greece {
+    position: relative;
+    top: -725px;
+    left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+    display: inline-block;
+}
+.blueBar1 {
+    height: 33px;
+    width: 458px;
+    background-color: #2450FF;
+}
+.blueBar2 {
+    height: 33px;
+    width: 458px;
+    background-color: #2450FF;
+    margin-top: 34px;
+}
+.blueBar3 {
+    height: 33px;
+    width: 458px;
+    background-color: #2450FF;
+    margin-top: 34px;
+}
+.blueBar4 {
+    height: 33px;
+    width: 458px;
+    background-color: #2450FF;
+    margin-top: 34px;
+}
+.blueBar5 {
+    height: 33px;
+    width: 458px;
+    background-color: #2450FF;
+    margin-top: 34px;
+}
+.blueSquare {
+    height: 150px;
+    width: 150px;
+    background-color: #2450FF;
+    position: relative;
+    top: -300px;
+}
+.whiteVert {
+    height: 170px;
+    width: 33px;
+    background-color: white;
+    position: relative;
+    top: -452px;
+    left: 60px;
+}
+.whiteHoriz {
+    height: 33px;
+    width: 150px;
+    background-color: white;
+    position: relative;
+    top: -554px;
+}
+#niger {
+    position: relative;
+    top: -725px;
+    left: 350px;
+    border: black solid 2px;
+    width: 300px;
+    height: 301px;
+    display: inline-block;
+}
+.nigerOrange {
+    width: 300px;
+    height: 100px;
+    background-color: orangered;
+}
+.nigerGreen {
+    width: 300px;
+    height: 100px;
+    background-color: darkgreen;
+    margin-top: 101px;
+}
+.nigerCircle {
+    height: 90px;
+    width: 90px;
+    background-color: orangered;
+    position: relative;
+    top: -195px;
+    left: 110px;
+    border-radius: 100%;
+}
+#maldives {
+    position: relative;
+    top: -665px;
+    left: 80px;
+    border: black solid 2px;
+    width: 458px;
+    height: 301px;
+}
+.maldivesRed {
+    width: 458px;
+    height: 301px;
+    background-color: #C21E15;
+}
+.maldivesGreen {
+    width: 300px;
+    height: 160px;
+    background-color: #08801C;
+    position: relative;
+    top: -230px;
+    left: 75px;
+}
+.maldivesWhiteCirc {
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    position: relative;
+    top: -370px;
+    left: 165px;
+    border-radius: 100%;
+}
+.maldivesGreenCirc {
+    height: 110px;
+    width: 110px;
+    background-color: #08801C;
+    position: relative;
+    top: -485px;
+    left: 185px;
+    border-radius: 100%;
+}

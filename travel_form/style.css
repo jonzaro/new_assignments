@@ -1,0 +1,14 @@
+#banner {
+    background-color: lightgreen ;
+    text-align: center;
+    padding: 25px;
+    width: 50vw;
+    margin: auto;
+}
+
+#formContainer {
+    background-color: lightblue;
+    padding: 25px;
+    width: 50vw;
+    margin: auto;
+}

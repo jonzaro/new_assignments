@@ -1,0 +1,21 @@
+#sumContainer {
+    margin-top: 75px;
+    padding-left: 25px;
+    background-color: aquamarine;
+}
+#subContainer {
+    margin-top: 75px;
+    padding-left: 25px;
+    background-color: lightsalmon;
+}
+#multContainer {
+    margin-top: 75px;
+    padding-left: 25px;
+    background-color: lightskyblue;
+}
+div {
+    padding: 25px
+}
+h1 {
+    margin-left: 35vw;
+}

@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+font-family: 'Inter', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.App {
+  margin-top: 50px;
+  position: absolute;
+  left: 25%;
+  width: 50vw;
+  height: 100vh;
+  background-image: url("./bg.png");
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+.icon {
+  position: relative;
+  padding-top: 30px;
+  margin-left: 400px;
+}
+
+.navText {
+  position: relative;
+  padding-left: 15px;
+  font-family: "Inter";
+  color: white;
+  font-size: 25px;
+}
+
+.coverImg {
+  position: relative;
+  top: 0px;
+  margin: 30px;
+  height: 250px;
+  border-radius: 9pt;
+}
+
+
+.flagImg {
+  margin-left: 200px;
+  height: 20px;
+}
+
+.locationTxt {
+  position: relative;
+  padding-left: 10px;
+  font-size: 20px;
+  letter-spacing: .2rem;
+}
+
+a {
+  padding-left: 10px;
+  color: #918E9B;
+  font-size: 14px;
+}
+
+
+
+h2 {
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.dates {
+  position: relative;
+  top: -10px;
+  left: 200px;
+
+}
+
+.descrip {
+  position: relative;
+  left: 200px;
+}
+
+.cards {
+  position: relative;
+
+  margin-top: 60px;
+  margin-left: 70px;
+  width: 450px;
+  height: 300px;
+}
+
+
+.rightTitle {
+  position: relative;
+  left: 100px;
+  top: -240px;
+}

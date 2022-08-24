@@ -1,0 +1,38 @@
+.header {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 80px;
+    background-color: #82A1FF;
+    border: 2px solid black ;
+}
+.bigBox {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 530px;
+    background-color: #82A1FF;
+    border: 2px solid black ;
+
+}
+.buttons {
+    padding-left: 240px;   
+    width: 360px;
+}
+p {
+    text-align: center;
+}
+#grad-pic {
+    width: 90%;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+#fail-pic {
+    width: 90%;
+    margin-top: 25px;
+    margin-left: 30px;
+}

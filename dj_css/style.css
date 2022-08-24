@@ -1,0 +1,124 @@
+#square1 {
+    margin-left: 20%;
+    margin-top: 10%;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-color: red;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square1:hover {
+        background-color: orange;
+        box-shadow: 10px 10px yellow;
+
+}
+
+#square2 {
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-color: orange;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square2:hover {
+    background-color: yellow;
+    box-shadow: 5px 10px green;
+
+}
+
+
+
+#square3 {
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-color: yellow;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square3:hover {
+    background-color: green;
+    box-shadow: 5px 10px blue;
+
+}
+
+
+#square4 {
+    margin-left: 20%;
+    margin-top: 5%;
+    height: 200px;
+    display: inline-block;
+    width: 200px;
+    background-color: green;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square4:hover {
+    background-color: blue;
+    box-shadow: 5px 10px violet;
+
+}
+
+
+#square5 {
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-color: blue;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square5:hover {
+    background-color: violet;
+    box-shadow: 5px 10px black;
+
+}
+
+
+#square6 {
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    background-color: violet;
+    border: 2px solid grey;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#square6:hover {
+    background-color: purple;
+    box-shadow: 5px 10px red;
+
+}

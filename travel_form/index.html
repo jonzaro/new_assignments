@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css">
+<title>Travel Information Form</title>
+</head>
+<body>
+    <div id="banner">
+        <h1>- Animal Migration Travel Agency - </h1>
+    </div>
+    <div id="formContainer">
+        <form name="travel" id="travel">
+
+
+            <label class="label" for="title">Please Enter Your Name: </label>
+            <input class="input" type="text" name="firstName" placeholder="First Name" />
+            <input class="input" type="text" name="lastName" placeholder="Last Name" />
+            <br><br>
+            <label class="label" for="title">Please Enter Your Age: </label>
+            <input class="input" type="number" name="age" placeholder="Enter You Age" />
+            <br><br>
+            <label class="label" for="title">Enter Your Species: </label>
+            <br>
+            Mammal <input class="input" type="radio" name="species" value="Mammal"/><br>
+            Bird:<input class="input" type="radio" name="species" value="Bird"/><br>
+            Fish: <input class="input" type="radio" name="species" value="Fish"/><br><br>
+
+            How Will You be Traveling?<br>
+            <select name="transportation">
+                <option value="Land">Land</option>
+                <option value="Air">Air</option>
+                <option value="Ocean">Ocean</option>
+            </select>
+            <br><br>
+            What Snacks Do You Need For Your Migration?<br>
+            Meat: <input type="checkbox" value="Meat" name="diet"/><br>
+            Insects: <input type="checkbox" value="Insects" name="diet"/><br>
+            Plankton: <input type="checkbox" value="Plankton" name="diet"/><br><br>
+
+
+            <button>submit</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

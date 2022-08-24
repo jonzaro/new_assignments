@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+    border-style: solid;
+    border-width: 5px;
+}
+p {
+    width: 70%;
+    font-size: 20px;
+}
+p .underline { 
+    display: inline;
+}
+.image-one {
+    transform: translate(650px, 350px);
+    height: 40%;
+    width: 40%;
+    border: solid black 2px;
+}
+.classifieds {
+    position: relative;
+    top: -250px;
+}
+.class-title {
+    font-size: 65px;
+    text-align: center;
+    border: solid 3px black;
+
+}
+.classified-article{
+    width: 100%;
+}
+.title {
+    position: relative;
+    top: -250px;
+    width: 60%;
+}
+header {
+    font-family: "Sofia";
+    font-size: 75px;
+  }
