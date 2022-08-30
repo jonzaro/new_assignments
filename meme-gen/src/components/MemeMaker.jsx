@@ -22,7 +22,7 @@ function Meme(props) {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, []);d
 
   function getMemeImage() {
     const randomNumber = Math.floor(Math.random() * allMemes.length);
