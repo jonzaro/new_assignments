@@ -10,6 +10,7 @@ function UglyContextProvider(props){
 
     function deleteThing() {
         axios.delete()
+        //render delete for everything, then 
     }
 
     React.useEffect(function () {
@@ -26,18 +27,13 @@ function UglyContextProvider(props){
 
       const addNewItem = (newUglyItem) => {
 
-
-            const thing = {
-                title: "NEW TUESDAY",
-                description: "Test Desc",
-                imgUrl: "www.someimage.jpeg"
-            };
-            axios.post('https://api.vschool.io/jonzaro/thing', thing)
-                .then(response => response.data)
+            axios.post('https://api.vschool.io/jonzaro/thing', newUglyItem)
+                .then(response => {
+                    console.log("Post Request:", response)
+                    setAllThings(prev=>[...prev, response.data])
+                })
                 .catch(err => console.log(err))
         
-
-        console.log(newUglyItem)
        
 
       }
@@ -49,7 +45,7 @@ function UglyContextProvider(props){
          <UglyContext.Provider value={{
             addNewItem: addNewItem,
             deleteThing: deleteThing,
-            allLThings: allThings,
+            allThings: allThings,
             
          }}>
             {props.children}

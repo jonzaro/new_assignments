@@ -10,7 +10,6 @@ function App() {
         <AddUglyThing />
         <PostRequestHooks />
         <ListMaker />
-
     </div>
   );
 }
