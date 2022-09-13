@@ -8,23 +8,6 @@ function ListMaker(){
     const contextThings = useContext(UglyContext)
     
 
-    const deleteItem = (id) => {
-        console.log("Delete item with this ID: ", id)
-        axios.delete(`https://api.vschool.io/jonzaro/thing/${id}`)
-        .then(res => {
-            console.log("Delete request: ", res)
-            UglyContext.addNewItem(prev => {
-                //if this is the incorrect way to access context and get my state setter funciton, then how come the axios 
-                //delete is working?
-                return prev.filter((item) => item._id !== id)
-                
-                //also where do I refresh page inside delete button
-                
-            })
-        })
-        .catch(err => console.log(err))
-
-    }
 
     const list = contextThings.allThings.map(thing => <div key={thing._id}>
         <h2>{thing.title}</h2>
@@ -32,7 +15,8 @@ function ListMaker(){
         <br></br>
         {thing.description}
         <br></br>
-        <button onClick={() => {deleteItem(thing._id)}}>Delete</button>
+        <button onClick={() => {contextThings.editItem(thing._id)}}>Edit</button>
+        <button onClick={() => {contextThings.deleteItem(thing._id)}}>Delete</button>
         <hr></hr>
     </div>
     
