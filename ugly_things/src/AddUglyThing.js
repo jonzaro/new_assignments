@@ -4,19 +4,19 @@ import { UglyContext } from "./uglyThingsProvider"
 
 function AddUglyThing(props) {
 
-const {uglyThing, addNewItem} = useContext(UglyContext)
+const {uglyThing, submit} = useContext(UglyContext)
 
 
 const [formData, setFormData] = React.useState({
-    title: "",
-    description: "",
-    imgUrl: ""
+    title: props.title || "",
+    description: props.description || "",
+    imgUrl: props.imgUrl || ""
 })
 
 function handleSubmit(data) {
     
-    addNewItem(data)
-   
+    props.submit(data)
+    
 }
 
 function handleChange(event){
@@ -31,11 +31,12 @@ function handleChange(event){
     return (
         <>
         <div className="main">
-            <h3> AddUglyThing component returns inputs and button</h3>
+            <h3> Submit your ugly thing</h3>
             <form 
                 className="formInputs" 
                 onSubmit={(e) => {
                     e.preventDefault()
+
                     handleSubmit(formData)
 }}>
                 <input 

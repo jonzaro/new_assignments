@@ -1,5 +1,5 @@
 import './App.css';
-import PostRequestHooks from './PostRequestHooks';
+import EditItem from './EditItem';
 import ListMaker from './ListMaker';
 import AddUglyThing from './AddUglyThing';
 
@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
         <AddUglyThing />
-        <PostRequestHooks />
         <ListMaker />
+        {/* <EditItem /> */}
     </div>
   );
 }
