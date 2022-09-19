@@ -14,8 +14,7 @@ const [formData, setFormData] = React.useState({
 })
 
 function handleSubmit(data) {
-    
-    props.submit(data)
+    submit(data)
     
 }
 
