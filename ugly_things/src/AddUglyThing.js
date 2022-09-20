@@ -4,7 +4,6 @@ import { UglyContext } from "./uglyThingsProvider"
 
 function AddUglyThing(props) {
 
-const {uglyThing, submit} = useContext(UglyContext)
 
 
 const [formData, setFormData] = React.useState({
@@ -14,7 +13,7 @@ const [formData, setFormData] = React.useState({
 })
 
 function handleSubmit(data) {
-    submit(data)
+    props.submit(data, props._id)
     
 }
 
@@ -29,7 +28,7 @@ function handleChange(event){
 
     return (
         <>
-        <div className="main">
+        <div className={props.formStyle === "edit" ? "edit_main" : "main"}>
             <h3> Submit your ugly thing</h3>
             <form 
                 className="formInputs" 

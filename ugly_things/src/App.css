@@ -15,6 +15,11 @@
   padding-top: 20px; 
 }
 
+.edit_main {
+  background-color: aqua;
+}
+
+
 .edit_form {
   background-color: grey;
   border-radius: 10px;

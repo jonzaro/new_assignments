@@ -8,6 +8,7 @@ const UglyContext = React.createContext()
 
 function UglyContextProvider(props){
 
+    const [toggleEdit, setToggleEdit] = React.useState(false)
 
     const [allThings, setAllThings] = React.useState([]);
 
@@ -28,16 +29,18 @@ function UglyContextProvider(props){
       }, []);
 
 
-      //edit is not working
+      //edit is working
     
-      const editItem = (id) => {
+      const editItem = (edits, id) => {
         console.log("Edited item with this ID: ", id)
-        axios.put(`https://api.vschool.io/jonzaro/thing/${id}`)
+        axios.put(`https://api.vschool.io/jonzaro/thing/${id}`, edits)
         .then(res => {
             console.log("Edit/Put request: ", res)
 
-                return setAllThings(prev=> prev.filter((item) => item._id !== id))
-                                
+                return (
+                    setAllThings(prev=> prev.map((item) => item._id !== id ? item : res.data)),
+                    setToggleEdit(prev => !prev)
+                )
             })
         
         .catch(err => console.log(err))
@@ -80,7 +83,9 @@ function UglyContextProvider(props){
             allThings: allThings,
             setAllThings: setAllThings,
             deleteItem: deleteItem,
-            editItem: editItem
+            editItem: editItem,
+            setToggleEdit: setToggleEdit,
+            toggleEdit: toggleEdit
          }}>
             {props.children}
          </UglyContext.Provider>
