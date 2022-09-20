@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+
+
+.navbar {
+  width: 100vw;
+  height: 70px;
+  padding-top: 10px;
+  background-color: rgb(192, 200, 228);
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: white;
+}
+
+.main {
+  width: 1000px;
+  height: 500px;
+  padding: 30px;
+  margin-left: 70px;
+  border-radius: 10px;
+  background-color: aqua;
+}
+
+.footer {
+  width: 100vw;
+  height: 50px;
+  padding: 5px;
+  background-color: rgb(211, 226, 242);
+}
