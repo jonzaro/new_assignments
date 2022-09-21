@@ -1,13 +1,13 @@
 import React from "react"
+// import bannerImg from "../src/banner.jpeg"
 
-function Header(){
+
+function Header(props){
 
 return (
     <div className="header">
-        <h3>
-            Seattle Plumbing Specialists LLC
-        </h3>
-
+        <img src={props.img} />
+        {console.log(props)}
     </div>
 )
 
