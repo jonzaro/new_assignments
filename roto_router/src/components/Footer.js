@@ -5,7 +5,7 @@ function Footer(){
 return (
     <div className="footer">
         <h3>
-            I'm the Footer.js Component Inside App.js
+            Seattle Plumber LLC    ||    ALL RIGHTS RESERVED || WA LIC#7266J3726KK
         </h3>
 
     </div>

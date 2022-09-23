@@ -7,7 +7,6 @@ function Header(props){
 return (
     <div className="header">
         <img src={props.img} />
-        {console.log(props)}
     </div>
 )
 

@@ -7,7 +7,7 @@ return (
         <br></br>
      
 
-        <h2>Who are we?</h2>
+        <h1>Who are we?</h1>
         <p style={{fontSize: 20}}>
             Seatown Electric Heating and Air is proud to serve individuals all throughout Seattle.
             Helping one person at a time and treating each customer like family is the only way 
