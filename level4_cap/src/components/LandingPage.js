@@ -4,7 +4,12 @@ function LandingPage() {
 
 
     return (
-        <div className="mainAreaLanding">
+        <>
+            
+            <div className="mainAreaLanding">
+            <div className="landingCenter">
+                
+            </div>
             <div className="landingFlex">
                 <div className="flexItem">About the FDA</div>
                 <div className="flexItem">Current Recall List</div>
@@ -20,7 +25,7 @@ function LandingPage() {
        
             </div>
         </div>
-
+        </>
     )
 }
 

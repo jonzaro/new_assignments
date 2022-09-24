@@ -4,6 +4,7 @@ import Main from "./components/Main"
 import RecallList from './components/RecallList';
 import Search from './components/Search';
 import LandingPage from './components/LandingPage';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 
@@ -32,12 +33,9 @@ function App() {
           <Route path="/recalllist" element={<RecallList />}  />
           <Route path="/search" element={<Search />} />
 
-
         </Routes>
-
-
-
-        {/* <Footer /> */}
+        
+        <Footer />
 
       </Router>
 
