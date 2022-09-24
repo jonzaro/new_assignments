@@ -41,6 +41,9 @@ function Main() {
                     In some situations, the FDA may request or mandate a recall.
                 </p>
             </div>
+            <div className="aboutImg">
+                
+            </div>
         </div>
         
 
