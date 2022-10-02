@@ -28,6 +28,7 @@ function Main() {
             <div className="whiteBox">
                 <div className="about">
                     <h2>What is a recall?</h2>
+                    <hr></hr>
                     <p>
                     Food recalls are removals of foods from the market that are in violation of the US Food and 
                     Drug Administration’s (FDA) regulations. FDA regulates all foods except meat, poultry, and 

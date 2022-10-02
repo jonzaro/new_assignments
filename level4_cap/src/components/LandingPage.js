@@ -13,6 +13,7 @@ function LandingPage() {
             <div className="landingFlex">
                 <div className="flexItem">
                     <h2>About the FDA</h2>
+                    <hr></hr>
                     <p>
                         The Food and Drug Administration is the oldest comprehensive consumer protection agency
                         in the U. S. federal government. Since 1848 the federal government has used chemical 
@@ -23,6 +24,8 @@ function LandingPage() {
 
                 <div className="flexItem">
                     <h2>What are product recalls?</h2>
+                    <hr></hr>
+
                     <p>
                     What is a Recall? Food recalls are removals of foods from the market that are in violation of
                      the US Food and Drug Administration's (FDA) regulations. FDA regulates all foods except meat,
@@ -32,6 +35,8 @@ function LandingPage() {
 
                 <div className="flexItem">
                     <h2>Search for Recalls</h2>
+                    <hr></hr>
+
                     <p>
                         We have designed and developed a custom search tool for consumers. The goal of this search tool was for 
                         consumers to havev an easier way to sort through the bulk of information provided by the FDA. If you found

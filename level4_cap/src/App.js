@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Main from "./components/Main"
 import RecallList from './components/RecallList';
-import Search from './components/Search';
 import LandingPage from './components/LandingPage';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
@@ -10,9 +9,11 @@ import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 
 
 function App() {
+  let windowWidth = window.innerWidth;
+
   return (
     <div className="App">
-
+      {console.log(windowWidth)}
       <Router>
         {/* <Header /> */}
 
@@ -20,7 +21,6 @@ function App() {
 
           <Link to="/" style={{padding: 5}}>Home</Link>
           <Link to="/about" style={{padding: 5}}>About</Link>
-          <Link to="/recalllist" style={{padding: 5}}>Recall List</Link>
           <Link to="/search" style={{padding: 5}}>Search</Link>
 
 
@@ -30,11 +30,10 @@ function App() {
 
           <Route path="/" element={<LandingPage />}  />
           <Route path="/about" element={<Main />} />
-          <Route path="/recalllist" element={<RecallList />}  />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search" element={<RecallList />}  />
 
         </Routes>
-        
+
         <Footer />
 
       </Router>
