@@ -84,6 +84,7 @@ function UglyContextProvider(props){
             setAllThings: setAllThings,
             deleteItem: deleteItem,
             editItem: editItem,
+            //move sett toggle and toggle edit to its own new state in a new component
             setToggleEdit: setToggleEdit,
             toggleEdit: toggleEdit
          }}>

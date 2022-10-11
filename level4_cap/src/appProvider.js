@@ -32,8 +32,7 @@ function AppContextProvider(props){
 
             //PASS FUNCTIONS AND STATE HERE
 
-            // searchData: searchData;
-            // deleteItem: deleteItem
+           
             // assignID: assignID,
             recalls: recalls
 

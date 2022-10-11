@@ -24,6 +24,7 @@ function ListMaker(){
         <br></br>
         {thing.description}
         <br></br>
+        {/* move 21 - 34  into its own component*/}
         <button onClick={handleEdit}>Edit</button>
         <button onClick={() => {contextThings.deleteItem(thing._id)}}>Delete</button>
         <hr></hr>
