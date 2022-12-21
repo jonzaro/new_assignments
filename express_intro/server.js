@@ -1,30 +1,113 @@
 const express = require("express")
 const app = express()
+const {v4: uuidv4} = require('uuid')
 
 
-const users = [
-    { name: "joe", age:20 },
-    { name: "bob", age:55 },
-    { name: "anne", age:36 },
-    { name: "jeff", age:14 },
-    { name: "frank", age:36 },
-    { name: "jenny", age:21 }
+//middleware for all requests
+
+app.use(express.json())
+
+const bounties = [
+    { 
+        firstName: "Jabba",
+        lastName: "the Hut",
+        living: true,
+        bountyAmount: 150,
+        type: "Bad Guy",
+        _id: uuidv4() 
+    },
+
+    { 
+        firstName: "Anakin",
+        lastName: "Skywalker",
+        living: true,
+        bountyAmount: 250,
+        type: "Jedi",
+        _id:  uuidv4() 
+    },
+
+    { 
+        firstName: "Boba",
+        lastName: "Fett",
+        living: true,
+        bountyAmount: 750,
+        type: "Bad Guy",
+        _id:  uuidv4() 
+    },
+
+    { 
+        firstName: "Luke",
+        lastName: "Skywalker",
+        living: true,
+        bountyAmount: 850,
+        type: "Jedi",
+        _id:  uuidv4() 
+    },
+
+    { 
+        firstName: "Obi-Wan",
+        lastName: "Kenobi",
+        living: true,
+        bountyAmount: 950,
+        type: "Jed",
+        _id:  uuidv4() 
+    },
+
+    { 
+        firstName: "Emperor",
+        lastName: "Palpatine",
+        living: true,
+        bountyAmount: 1000,
+        type: "Bad Guy",
+        _id:  uuidv4() 
+    }
 ]
 
 
-//ROUTE EXAMPLE HAS TO HAVE A CALLBACK AS 2ND ARGUMENT
-
-app.get("/users", (req, res) => {
-    res.send(users)
+// GET all
+app.get("/bounty", (req, res) => {
+    res.send(bounties)
 })
 
-app.get("/greeting", (req, res) => {
-    res.send("Good afternoon")
+// GET one
+app.get("/bounty/:bountyId", (req, res) => {
+    const bountyId = req.params.bountyId
+    const foundBounty = bounties.find(bounty => bounty._id === bountyId)
+    res.send(foundBounty)
 })
 
-app.get("/addresses", (req, res) => {
-    res.send({address: "777 Lucky Street, Las Vegas, Nevada"})
+// GET by Type
+app.get("/bounty/search/type", (req, res) => {
+    const type = req.query.type   
+    const filteredBounties = bounties.filter(bounty => bounty.type === type)
+    res.send(filteredBounties)
+
 })
+
+// POST one
+app.post("/bounty", (req, res) => {
+    req.body._id = uuidv4()
+    bounties.push(req.body)
+    res.send("Successfully added a new bounty to the database")   
+})
+
+// EDIT
+app.put("/bounty", (req, res) => {
+    //some ID matching logic
+})
+
+// DELETE
+app.delete("/bounty", (req, res) => {
+    //sone id matching logic
+})
+
+// app.get("/greeting", (req, res) => {
+//     res.send("Good afternoon")
+// })
+
+// app.get("/addresses", (req, res) => {
+//     res.send({address: "777 Lucky Street, Las Vegas, Nevada"})
+// })
 
 
 
