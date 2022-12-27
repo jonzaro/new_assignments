@@ -84,6 +84,8 @@ app.get("/bounty/search/type", (req, res) => {
 
 })
 
+
+
 // POST one
 app.post("/bounty", (req, res) => {
     req.body._id = uuidv4()
@@ -91,15 +93,29 @@ app.post("/bounty", (req, res) => {
     res.send("Successfully added a new bounty to the database")   
 })
 
-// EDIT
-app.put("/bounty", (req, res) => {
-    //some ID matching logic
+
+
+// UPDATE ONE
+app.put("/bounty/:bountyId", (req, res) => {
+   const bountyId = req.params.bountyId
+   const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+   const updatedBounty = Object.assign(bounties[bountyIndex], req.body)
+   res.send(console.log("Successfully updated bounty in the database", updatedBounty))
 })
 
+
+
 // DELETE
-app.delete("/bounty", (req, res) => {
-    //sone id matching logic
-})
+app.delete("/bounty/:bountyId", (req, res) => {
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+    bounties.splice(bountyIndex, 1)
+    res.send("Successfully deleted bounty from the database")
+})  
+
+
+
+
 
 // app.get("/greeting", (req, res) => {
 //     res.send("Good afternoon")
