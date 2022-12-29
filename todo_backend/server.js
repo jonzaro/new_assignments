@@ -6,6 +6,11 @@ const {v4: uuidv4} = require("uuid")
 //MIDDLEWARE THAT FIRES FOR ALL ROUTES
 app.use(express.json())
 
+//SETTING UP MONGODB
+mongodb+srv://jzaro:F3sg6WbhwiVFEdvT@jzvschoolcluster.7bdiaq7.mongodb.net/?retryWrites=true&w=majority
+
+mongoose.connect("mongodb://localhost:27017/test-db", () => console.log('connected to database'))
+
 
 
 //ARRAY OF TODO OBJECTS

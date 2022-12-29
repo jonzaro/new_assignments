@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const {v4: uuidv4} = require('uuid')
+// const bounties = require("./bountyData.js")
 
 
 //middleware for all requests
@@ -11,7 +12,7 @@ const bounties = [
     { 
         firstName: "Jabba",
         lastName: "the Hut",
-        living: true,
+        living: "Alive",
         bountyAmount: 150,
         type: "Bad Guy",
         _id: uuidv4() 
@@ -20,7 +21,7 @@ const bounties = [
     { 
         firstName: "Anakin",
         lastName: "Skywalker",
-        living: true,
+        living: "Alive",
         bountyAmount: 250,
         type: "Jedi",
         _id:  uuidv4() 
@@ -29,7 +30,7 @@ const bounties = [
     { 
         firstName: "Boba",
         lastName: "Fett",
-        living: true,
+        living: "Alive",
         bountyAmount: 750,
         type: "Bad Guy",
         _id:  uuidv4() 
@@ -38,7 +39,7 @@ const bounties = [
     { 
         firstName: "Luke",
         lastName: "Skywalker",
-        living: true,
+        living: "Alive",
         bountyAmount: 850,
         type: "Jedi",
         _id:  uuidv4() 
@@ -47,7 +48,7 @@ const bounties = [
     { 
         firstName: "Obi-Wan",
         lastName: "Kenobi",
-        living: true,
+        living: "Alive",
         bountyAmount: 950,
         type: "Jed",
         _id:  uuidv4() 
@@ -56,7 +57,7 @@ const bounties = [
     { 
         firstName: "Emperor",
         lastName: "Palpatine",
-        living: true,
+        living: "Alive",
         bountyAmount: 1000,
         type: "Bad Guy",
         _id:  uuidv4() 
@@ -88,9 +89,10 @@ app.get("/bounty/search/type", (req, res) => {
 
 // POST one
 app.post("/bounty", (req, res) => {
+    const newBounty = req.body
     req.body._id = uuidv4()
-    bounties.push(req.body)
-    res.send("Successfully added a new bounty to the database")   
+    bounties.push(newBounty)
+    res.send(newBounty)   
 })
 
 
@@ -134,4 +136,4 @@ app.delete("/bounty/:bountyId", (req, res) => {
 // 2nd argument is a callback func
 app.listen(9000, () => {
     console.log("The Server is running on Port 9000")
-})
+}) 
