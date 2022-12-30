@@ -4,20 +4,21 @@ import AddBountyForm from "./AddBountyForm";
 
 
 export default function Bounty(props) {
-    const {firstName, lastName, living, bountyAmount, type, image, _id} = props
+    const {firstName, lastName, living, bountyAmount, type, _id} = props
     const [editToggle, setEditToggle] = useState(false)
 
     return (
         <div className="bounty">   
         { !editToggle ?
             <>
-                <h1>Bounty Target: { props.firstName } { props.lastName }</h1>
-                <p> Status: { props.living === "Alive" ? "Alive" : "Dead"}</p>
-                <p> Reward: {props.bountyAmount } credits</p>
-                <p> Type: { props.type }</p>
-                {/* {console.log(props)} */}
+                <div className="bounty-details">
+                    <h1>Bounty Target: { props.firstName } { props.lastName }</h1>
+                    <p> Status: { props.living === "Alive" ? "Alive" : "Dead"}</p>
+                    <p> Reward: {props.bountyAmount } credits</p>
+                    <p> Type: { props.type }</p>
+                </div>
                 <img className="bountyImg" src={props.image} alt=""/>
-                <br></br>
+                <br></br><br></br>
                 <button 
                     className="delete-button"
                     onClick={() => props.deleteBounty(props._id)}

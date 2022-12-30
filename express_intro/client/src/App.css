@@ -3,7 +3,6 @@
 }
 
 
-
 .App-header {
   background-color: #282c34;
   background-image: url("wanted.jpeg");
@@ -42,8 +41,10 @@
   color: black;
 }
 
-h1 {
+h1  {
   margin: 5px;
+  color: white;
+  
 }
 
 p {
@@ -51,18 +52,42 @@ p {
 }
 
 
+.header-banner {
+  width: 300px;
+  height: 90px;
+  opacity: 0.8;
+  margin-left: 260px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgb(113, 116, 120);
+
+}
+
+.header-img {
+  background-color: rgb(138, 138, 123);
+  background-image: url("../public/banner.jpeg");
+  border: 2px solid rgb(67, 67, 67);
+  width: 600px;
+  height: 150px;
+  padding: 10px;
+  margin-top:25px;
+  border-radius: 9px;
+}
+
 
 .bounty-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../public/bountybg.jpeg");
+  border-radius: 8px;
   width: 66vw;
   margin:  50px;
   margin-left: 15vw;
 }
 
 .bounty-form {
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 3px;
   background-color: #c0d3d8;
   width: 40vw;
@@ -70,16 +95,24 @@ p {
   padding-bottom: 10px;
 }
 
-
-
 .bounty {
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 3px;
   background-color: #c0d3d8;
   width: 40vw;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-bottom: 5px;
+}
+
+.bounty-details {
+  width: 25vw;
+  background-color: #557983;
+  border: 3px solid rgb(72, 72, 72);
+  border-radius: 6px;
+  padding: 10px;
+  margin-left: 95px;
+  margin-bottom: 10px;
 }
 
 .bountyImgDiv {
@@ -87,7 +120,6 @@ p {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background-color: aquamarine;
   margin: 5px;
 }
 
@@ -123,12 +155,14 @@ input {
 .delete-button {
   background-color: rgb(44, 59, 144);
   color: rgb(126, 232, 238);
+  font-size: 20px;;
   padding: 5px;
   border-radius: 8px;
 }
 
 .editButton {
   background-color: rgb(88, 118, 149);
+  font-size: 20px;;
   color: white;
   padding: 5px;
   border-radius: 8px;
@@ -139,4 +173,8 @@ input {
   color: white;
   padding: 5px;
   border-radius: 8px;
+}
+
+p {
+  color: rgb(225, 225, 225);
 }

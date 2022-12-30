@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Bounty from "./components/Bounty"
 import AddMovieForm from './components/AddBountyForm';
-// import wantedImg from "../src/images/wanted.jpg";
+
 
 function App() {
 
@@ -60,11 +60,14 @@ function App() {
     <div className="App">
       <header className="App-header">
           <div className="header-image">
-          {/* <img src={wantedImg} className="App-logo" alt="logo" /> */}
           </div>
       </header>
         <div className="bounty-container">
-          
+          <div className="header-img">
+            <div className="header-banner">
+                <h1>ADD A BOUNTY TO THE BOARD</h1>
+              </div>
+          </div>
           <AddMovieForm 
             submit={addBounty} 
             buttonText="Add Bounty"
