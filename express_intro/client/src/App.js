@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import Bounty from "./components/Bounty"
 import AddMovieForm from './components/AddBountyForm';
+// import wantedImg from "../src/images/wanted.jpg";
 
 function App() {
 
   const [bounties, setBounties] = useState([])
 
 
+  //GET ALL BOUNTIES
   function getBounties(){
     axios.get("/bounty")
       .then(res => setBounties(res.data))
@@ -17,12 +18,14 @@ function App() {
 
   }
 
+  //POST NEW BOUNTY
   function addBounty(newBounty){
     axios.post("/bounty", newBounty)
       .then(res => {setBounties(prevBounties => [...prevBounties, res.data])})
       .catch(err => console.log(err))
   }
 
+  //DELETE BOUNTY
   function deleteBounty(bountyId) {
     axios.delete(`/bounty/${bountyId}`)
       .then(res => {
@@ -31,6 +34,7 @@ function App() {
       .catch(err => console.log(err))
   }
 
+  //EDIT BOUNTY
   function editBounty(updates, bountyId) {
     axios.put(`/bounty/${bountyId}`, updates)
       .then(res => 
@@ -55,7 +59,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+          <div className="header-image">
+          {/* <img src={wantedImg} className="App-logo" alt="logo" /> */}
+          </div>
       </header>
         <div className="bounty-container">
           
@@ -68,7 +74,7 @@ function App() {
           { 
             bounties.map(bounty => 
               <Bounty 
-                {...bounty} 
+                {...bounty}
                 key={bounty._id} 
                 deleteBounty={deleteBounty}
                 editBounty={editBounty}

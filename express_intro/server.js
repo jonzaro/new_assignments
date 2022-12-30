@@ -1,73 +1,17 @@
 const express = require("express")
 const app = express()
 const {v4: uuidv4} = require('uuid')
-// const bounties = require("./bountyData.js")
+const bountyData = require("./bountyData.js")
 
 
 //middleware for all requests
 
 app.use(express.json())
 
-const bounties = [
-    { 
-        firstName: "Jabba",
-        lastName: "the Hut",
-        living: "Alive",
-        bountyAmount: 150,
-        type: "Bad Guy",
-        _id: uuidv4() 
-    },
-
-    { 
-        firstName: "Anakin",
-        lastName: "Skywalker",
-        living: "Alive",
-        bountyAmount: 250,
-        type: "Jedi",
-        _id:  uuidv4() 
-    },
-
-    { 
-        firstName: "Boba",
-        lastName: "Fett",
-        living: "Alive",
-        bountyAmount: 750,
-        type: "Bad Guy",
-        _id:  uuidv4() 
-    },
-
-    { 
-        firstName: "Luke",
-        lastName: "Skywalker",
-        living: "Alive",
-        bountyAmount: 850,
-        type: "Jedi",
-        _id:  uuidv4() 
-    },
-
-    { 
-        firstName: "Obi-Wan",
-        lastName: "Kenobi",
-        living: "Alive",
-        bountyAmount: 950,
-        type: "Jed",
-        _id:  uuidv4() 
-    },
-
-    { 
-        firstName: "Emperor",
-        lastName: "Palpatine",
-        living: "Alive",
-        bountyAmount: 1000,
-        type: "Bad Guy",
-        _id:  uuidv4() 
-    }
-]
-
 
 // GET all
 app.get("/bounty", (req, res) => {
-    res.send(bounties)
+    res.send(bountyData.bounties)
 })
 
 // GET one
@@ -91,7 +35,7 @@ app.get("/bounty/search/type", (req, res) => {
 app.post("/bounty", (req, res) => {
     const newBounty = req.body
     req.body._id = uuidv4()
-    bounties.push(newBounty)
+    bountyData.bounties.push(newBounty)
     res.send(newBounty)   
 })
 
@@ -100,8 +44,8 @@ app.post("/bounty", (req, res) => {
 // UPDATE ONE
 app.put("/bounty/:bountyId", (req, res) => {
    const bountyId = req.params.bountyId
-   const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
-   const updatedBounty = Object.assign(bounties[bountyIndex], req.body)
+   const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
+   const updatedBounty = Object.assign(bountyData.bounties[bountyIndex], req.body)
    res.send(console.log("Successfully updated bounty in the database", updatedBounty))
 })
 
@@ -110,8 +54,8 @@ app.put("/bounty/:bountyId", (req, res) => {
 // DELETE
 app.delete("/bounty/:bountyId", (req, res) => {
     const bountyId = req.params.bountyId
-    const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
-    bounties.splice(bountyIndex, 1)
+    const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
+    bountyData.bounties.splice(bountyIndex, 1)
     res.send("Successfully deleted bounty from the database")
 })  
 

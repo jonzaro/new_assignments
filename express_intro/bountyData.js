@@ -1,59 +1,71 @@
-const {v4: uuidv4} = require('uuid')
+const {v4: uuidv4} = require('uuid');
+const express = require("express");
+const app = express();
+
+
+app.use(express.static('images'));
 
 
 
-const bounties = [
+exports.bounties = [
     { 
-        firstName: "Jabba",
-        lastName: "the Hut",
+        firstName: "Jenta",
+        lastName: "Dari",
         living: "Alive",
         bountyAmount: 150,
-        type: "Bad Guy",
+        type: "Smuggler",
+        // image: {Image1},
+        image: "http://localhost:3000/bounties1.jpeg",
         _id: uuidv4() 
     },
 
     { 
-        firstName: "Anakin",
-        lastName: "Skywalker",
+        firstName: "Sandor",
+        lastName: "il Cattivo",
         living: "Alive",
         bountyAmount: 250,
-        type: "Jedi",
+        type: "Murderer",
+        image: "http://localhost:3000/bounties2.jpeg",
         _id:  uuidv4() 
     },
 
     { 
-        firstName: "Boba",
-        lastName: "Fett",
+        firstName: "Toren",
+        lastName: "Aslov",
         living: "Alive",
         bountyAmount: 750,
-        type: "Bad Guy",
+        type: "Criminal of the Republic",
+        image: "http://localhost:3000/bounties3.jpeg",
         _id:  uuidv4() 
     },
 
     { 
-        firstName: "Luke",
-        lastName: "Skywalker",
+        firstName: "Ambassador",
+        lastName: "Domek",
         living: "Alive",
         bountyAmount: 850,
-        type: "Jedi",
+        type: "Political Rebel",
+        image: "http://localhost:3000/bounties4.jpeg",
         _id:  uuidv4() 
     },
 
     { 
-        firstName: "Obi-Wan",
-        lastName: "Kenobi",
+        firstName: "Lavos",
+        lastName: "Spectre",
         living: "Alive",
         bountyAmount: 950,
-        type: "Jed",
+        type: "Modified Human",
+        image: "http://localhost:3000/bounties5.jpeg",
         _id:  uuidv4() 
     },
 
     { 
-        firstName: "Emperor",
-        lastName: "Palpatine",
+        firstName: "Arcane",
+        lastName: "Cinder",
         living: "Alive",
         bountyAmount: 1000,
-        type: "Bad Guy",
+        type: "Modified Human",
+        image: "http://localhost:3000/bounties6.jpeg",
         _id:  uuidv4() 
     }
 ]

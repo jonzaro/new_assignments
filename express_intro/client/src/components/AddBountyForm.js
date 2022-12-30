@@ -29,8 +29,11 @@ export default function AddBountyForm(props){
 
 
     return (
+        <>
+        
+        <h1>ADD A BOUNTY TO THE BOARD</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form className="bounty-form" onSubmit={handleSubmit}>
             <input 
             type="text" 
             name="firstName" 
@@ -70,6 +73,7 @@ export default function AddBountyForm(props){
 
         </form>
 
+        </>
 
     )
 
