@@ -14,7 +14,7 @@ function App() {
   function getBounties(){
     axios.get("/bounty")
       .then(res => setBounties(res.data))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data.errMsg))
 
   }
 
@@ -22,7 +22,7 @@ function App() {
   function addBounty(newBounty){
     axios.post("/bounty", newBounty)
       .then(res => {setBounties(prevBounties => [...prevBounties, res.data])})
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data.errMsg))
   }
 
   //DELETE BOUNTY
@@ -31,7 +31,7 @@ function App() {
       .then(res => {
         setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== bountyId))
       })
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data.errMsg))
   }
 
   //EDIT BOUNTY
@@ -47,7 +47,7 @@ function App() {
 
     //does not update to the list unless i refresh the page
 
-      .catch(err => console.log(err))
+      .catch(err => console.log(err.response.data.errMsg))
   }
 
   useEffect(() => {
