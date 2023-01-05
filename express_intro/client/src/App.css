@@ -63,8 +63,9 @@ p {
 }
 
 .header-img {
-  background-color: rgb(138, 138, 123);
+  background-color: rgb(93, 124, 148);
   background-image: url("../public/banner1.jpeg");
+  background-repeat: no-repeat;
   border: 2px solid rgb(67, 67, 67);
   width: 60vw;
   height: 150px;

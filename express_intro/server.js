@@ -39,7 +39,6 @@ app.get("/bounty", (req, res, next) => {
     // res.status(200)
     // res.send(bountyData.bounties)
     Bounty.find((err, bounties) => {
-        console.log("hello frmo line 43")
         if(err){
             res.status(500)
             return next(err)
@@ -150,6 +149,6 @@ app.use((err, req, res, next) => {
 
 // 1st argument is port 
 // 2nd argument is a callback func
-app.listen(9000, () => {
-    console.log("The Server is running on Port 9000")
+app.listen(8000, () => {
+    console.log("The Server is running on Port 8000")
 }) 

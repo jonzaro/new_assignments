@@ -8,6 +8,7 @@ export default function AddBountyForm(props){
         living: props.living || "",
         bountyAmount: props.bountyAmount || "",
         type: props.type || "",
+        image: props.image || ""
     }
 
     const [ inputs, setInputs ] = useState(initInputs)
@@ -66,7 +67,7 @@ export default function AddBountyForm(props){
                 value={inputs.type} 
                 onChange={handleChange} 
                 placeholder="Type"/>
-                
+
                 <input 
                 type="text"
                 name="image" 

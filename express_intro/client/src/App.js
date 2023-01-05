@@ -17,7 +17,6 @@ function App() {
       .catch(err => console.log(err.response.data.errMsg))
 
   }
-
   //POST NEW BOUNTY
   function addBounty(newBounty){
     axios.post("/bounty", newBounty)
@@ -50,9 +49,15 @@ function App() {
       .catch(err => console.log(err.response.data.errMsg))
   }
 
+  //FILTER BY REWARD FUNCTION
+  function handleFilter(e){
+    console.log(e.target.value)
+  }
+
+
   useEffect(() => {
     getBounties()
-}, [bounties])
+}, [])
 
 
 
@@ -74,6 +79,15 @@ function App() {
             //KEY NOT NECESSARY HERE?
             key={bounties._id}
           />
+
+          <h4>Filter by Reward</h4>
+          <select onChange={handleFilter} className="filter-form">
+            <option value="all">All</option>
+            <option value="250">250</option>
+            <option value="500">5000</option>
+            <option value="1000">1000</option>
+          </select>
+
           { 
             bounties.map(bounty => 
               <Bounty 
