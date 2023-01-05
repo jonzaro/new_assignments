@@ -66,6 +66,13 @@ export default function AddBountyForm(props){
                 value={inputs.type} 
                 onChange={handleChange} 
                 placeholder="Type"/>
+                
+                <input 
+                type="text"
+                name="image" 
+                value={inputs.image} 
+                onChange={handleChange} 
+                placeholder="Image"/>
                 <br></br>
                 <button className="add-bounty">{props.buttonText}</button> 
 

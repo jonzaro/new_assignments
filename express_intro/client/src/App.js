@@ -21,7 +21,7 @@ function App() {
   //POST NEW BOUNTY
   function addBounty(newBounty){
     axios.post("/bounty", newBounty)
-      .then(res => {setBounties(prevBounties => [...prevBounties, res.data])})
+      .then(res => {(setBounties(prevBounties => [...prevBounties, res.data]))})
       .catch(err => console.log(err.response.data.errMsg))
   }
 

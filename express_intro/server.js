@@ -1,18 +1,51 @@
 const express = require("express")
 const app = express()
-const {v4: uuidv4} = require('uuid')
-const bountyData = require("./bountyData.js")
+const morgan = require("morgan")
+// const {v4: uuidv4} = require('uuid')
+// const bountyData = require("./bountyData.js")
+const mongoose = require("mongoose")
+const Bounty = require("./models/bounty.js")
 
+mongoose.set('strictQuery', true)
+
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://jzaro:Somesillypassword111@ac-ivmbv5b-shard-00-00.7bdiaq7.mongodb.net:27017,ac-ivmbv5b-shard-00-01.7bdiaq7.mongodb.net:27017,ac-ivmbv5b-shard-00-02.7bdiaq7.mongodb.net:27017/?ssl=true&replicaSet=atlas-46v9oy-shard-0&authSource=admin&retryWrites=true&w=majority',
+  () => console.log("App is connected to the database and is running")) 
+
+  
+}
 
 //middleware for all requests
 
 app.use(express.json())
+app.use(morgan('dev'))
+
+
+
+//mongoDB atlas conect to cluster
+
+// mongoose.connect("mongodb+srv://jzaro:Somesillypassword111@cluster0.pltb0yg.mongodb.net/bountyhunter?retryWrites=true&w=majority", 
+// {
+//      useNewUrlParser: true 
+// },
+// () => console.log("App is connected to the database and is running")) 
 
 
 // GET all
-app.get("/bounty", (req, res) => {
-    res.status(200)
-    res.send(bountyData.bounties)
+app.get("/bounty", (req, res, next) => {
+
+    // res.status(200)
+    // res.send(bountyData.bounties)
+    Bounty.find((err, bounties) => {
+        console.log("hello frmo line 43")
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(bounties)
+    })
 })
 
 // GET one
@@ -43,55 +76,68 @@ app.get("/bounty/search/type", (req, res, next) => {
 
 
 // POST one
-app.post("/bounty", (req, res) => {
-    const newBounty = req.body
-    req.body._id = uuidv4()
-    bountyData.bounties.push(newBounty)
-    res.status(201).send(newBounty)   
+app.post("/bounty", (req, res, next) => {
+    const newBounty = new Bounty(req.body)
+    // req.body._id = uuidv4()
+    // bountyData.bounties.push(newBounty)
+    // res.status(201).send(newBounty)   
+    newBounty.save((err, savedBounty) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(savedBounty)
+    })
 })
 
 
 
 // UPDATE ONE
-app.put("/bounty/:bountyId", (req, res) => {
-   const bountyId = req.params.bountyId
-   const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
-   const updatedBounty = Object.assign(bountyData.bounties[bountyIndex], req.body)
-   res.status(201).send(console.log("Successfully updated bounty in the database", updatedBounty))
+app.put("/bounty/:bountyId", (req, res, next) => {
+    Bounty.findOneAndUpdate(
+        {_id: req.params.bountyId}, //find this one to update
+        req.body, //update the object with this data
+        {new: true}, //send back the updated version
+        (err, updatedBounty) => {
+            if(err){
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(updatedBounty)
+        }
+    )
+//    const bountyId = req.params.bountyId
+//    const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
+//    const updatedBounty = Object.assign(bountyData.bounties[bountyIndex], req.body)
+//    res.status(201).send(console.log("Successfully updated bounty in the database", updatedBounty))
 })
 
 
 
 // DELETE
-app.delete("/bounty/:bountyId", (req, res) => {
-    const bountyId = req.params.bountyId
-    const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
-    bountyData.bounties.splice(bountyIndex, 1)
-    res.send("Successfully deleted bounty from the database")
+app.delete("/bounty/:bountyId", (req, res, next) => {
+    Bounty.findOneAndDelete({_id: req.params.bountyId}, (err, deletedItem) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send("Successfully deleted bounty from the database", deletedItem)
+})
+
+    // const bountyId = req.params.bountyId
+    // const bountyIndex = bountyData.bounties.findIndex(bounty => bounty._id === bountyId)
+    // bountyData.bounties.splice(bountyIndex, 1)
+    // res.send("Successfully deleted bounty from the database")
 })  
 
 
 
 
 
-// app.get("/greeting", (req, res) => {
-//     res.send("Good afternoon")
-// })
-
-// app.get("/addresses", (req, res) => {
-//     res.send({address: "777 Lucky Street, Las Vegas, Nevada"})
-// })
 
 
-
-
-
-
-
-
-
-
-//Error Handler - Order matters
+//Error Handler - Argument order matters
+//return next brings new error object to frnot end
 
 app.use((err, req, res, next) => {
     console.log(err)

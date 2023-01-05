@@ -4,7 +4,7 @@ import AddBountyForm from "./AddBountyForm";
 
 
 export default function Bounty(props) {
-    const {firstName, lastName, living, bountyAmount, type, _id} = props
+    const {firstName, lastName, living, bountyAmount, type, image, _id} = props
     const [editToggle, setEditToggle] = useState(false)
 
     return (
@@ -37,6 +37,7 @@ export default function Bounty(props) {
                         living={living}
                         bountyAmount={bountyAmount}
                         type={type}
+                        image={image}
                         _id={_id}
                         key={_id}
                         //DO I NEED A UNIQUE KEY HERE?
