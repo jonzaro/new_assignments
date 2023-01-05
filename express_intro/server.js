@@ -59,16 +59,23 @@ app.get("/bounty/:bountyId", (req, res, next) => {
     res.status(200).send(foundBounty)
 })
 
-// GET by Type
-app.get("/bounty/search/type", (req, res, next) => {
-    const type = req.query.type   
-    if(type === ""){
-        const error = new Error("Search query must not be empty")
-        res.status(500)
-        return next(error)
-    }
-    const filteredBounties = bountyData.bounties.filter(bounty => bounty.type === type)
-    res.status(200).send(filteredBounties)
+// GET by BOUNTY AMOUNT
+app.get("/bounty/search/bountyAmount", (req, res, next) => {
+    Bounty.find({bountyAmount: req.query.bountyAmount}, (err, bounties) => {
+        if(err){
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(bounties)
+    })
+    // const type = req.query.type   
+    // if(type === ""){
+    //     const error = new Error("Search query must not be empty")
+    //     res.status(500)
+    //     return next(error)
+    // }
+    // const filteredBounties = bountyData.bounties.filter(bounty => bounty.type === type)
+    // res.status(200).send(filteredBounties)
 
 })
 

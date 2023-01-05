@@ -51,7 +51,13 @@ function App() {
 
   //FILTER BY REWARD FUNCTION
   function handleFilter(e){
-    console.log(e.target.value)
+    if(e.target.value === "reset"){
+      getBounties()
+    } else {
+    axios.get(`/bounty/search/bountyAmount?bountyAmount=${e.target.value}`)
+    .then(res => setBounties(res.data))
+    .catch(err => console.log(err.response.data.errMsg))
+    }
   }
 
 
@@ -79,13 +85,11 @@ function App() {
             //KEY NOT NECESSARY HERE?
             key={bounties._id}
           />
-
-          <h4>Filter by Reward</h4>
           <select onChange={handleFilter} className="filter-form">
-            <option value="all">All</option>
-            <option value="250">250</option>
-            <option value="500">5000</option>
-            <option value="1000">1000</option>
+            <option value="reset">- ALL BOUNTIES -</option>
+            <option value="250">250 Credits</option>
+            <option value="500">500 Credits</option>
+            <option value="1000">1000 Credits</option>
           </select>
 
           { 

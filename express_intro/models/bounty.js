@@ -19,6 +19,7 @@ const bountySchema = new Schema({
     },
     bountyAmount: {
         type: Number,
+        enum: ["250", "500", "1000"],
         required: true
     },
     type: {
