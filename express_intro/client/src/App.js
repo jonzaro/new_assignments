@@ -86,7 +86,7 @@ function App() {
             key={bounties._id}
           />
           <select onChange={handleFilter} className="filter-form">
-            <option value="reset">- ALL BOUNTIES -</option>
+            <option value="reset">- ALL BOUNTIESd -</option>
             <option value="250">250 Credits</option>
             <option value="500">500 Credits</option>
             <option value="1000">1000 Credits</option>

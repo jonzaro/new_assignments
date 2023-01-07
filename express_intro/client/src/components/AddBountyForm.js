@@ -31,54 +31,54 @@ export default function AddBountyForm(props){
 
     return (
         <>
-            
-            <form className="bounty-form" onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                name="firstName" 
-                value={inputs.firstName} 
-                onChange={handleChange} 
-                placeholder="First Name"/>
+            <div style={{height: 200, width:200, backgroundColor: "red"}}>
+                <form className="bounty-form" onSubmit={handleSubmit}>
+                    <input 
+                    type="text" 
+                    name="firstName" 
+                    value={inputs.firstName} 
+                    onChange={handleChange} 
+                    placeholder="First Name"/>
 
-                <input 
-                type="text" 
-                name="lastName" 
-                value={inputs.lastName} 
-                onChange={handleChange} 
-                placeholder="Last Name"/>
+                    <input 
+                    type="text" 
+                    name="lastName" 
+                    value={inputs.lastName} 
+                    onChange={handleChange} 
+                    placeholder="Last Name"/>
 
-                <input 
-                type="text" 
-                name="living" 
-                value={inputs.living} 
-                onChange={handleChange} 
-                placeholder="Living"/>
+                    <input 
+                    type="text" 
+                    name="living" 
+                    value={inputs.living} 
+                    onChange={handleChange} 
+                    placeholder="Living"/>
 
-                <input 
-                type="text" 
-                name="bountyAmount" 
-                value={inputs.bountyAmount} 
-                onChange={handleChange} 
-                placeholder="Bounty Amount"/>
+                    <input 
+                    type="text" 
+                    name="bountyAmount" 
+                    value={inputs.bountyAmount} 
+                    onChange={handleChange} 
+                    placeholder="Bounty Amount"/>
 
-                <input 
-                type="text"
-                name="type" 
-                value={inputs.type} 
-                onChange={handleChange} 
-                placeholder="Type"/>
+                    <input 
+                    type="text"
+                    name="type" 
+                    value={inputs.type} 
+                    onChange={handleChange} 
+                    placeholder="Type"/>
 
-                <input 
-                type="text"
-                name="image" 
-                value={inputs.image} 
-                onChange={handleChange} 
-                placeholder="Image"/>
-                <br></br>
-                <button className="add-bounty">{props.buttonText}</button> 
+                    <input 
+                    type="text"
+                    name="image" 
+                    value={inputs.image} 
+                    onChange={handleChange} 
+                    placeholder="Image"/>
+                    <br></br>
+                    <button className="add-bounty">{props.buttonText}</button> 
 
-            </form>
-
+                </form>
+            </div>
         </>
 
     )
